@@ -1,0 +1,201 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:GTB
+LIBS:Blinky-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L 7555 U1
+U 1 1 58A0013E
+P 5900 3350
+F 0 "U1" H 6600 2400 60  0000 C CNN
+F 1 "7555" H 5950 3350 60  0000 C CNN
+F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 5250 3450 60  0001 C CNN
+F 3 "" H 5250 3450 60  0000 C CNN
+	1    5900 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1
+U 1 1 58A001B3
+P 3975 2650
+F 0 "R1" V 4055 2650 50  0000 C CNN
+F 1 "1K" V 3975 2650 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 3905 2650 50  0001 C CNN
+F 3 "" H 3975 2650 50  0000 C CNN
+	1    3975 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R2
+U 1 1 58A00239
+P 3975 3300
+F 0 "R2" V 4055 3300 50  0000 C CNN
+F 1 "470L" V 3975 3300 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 3905 3300 50  0001 C CNN
+F 3 "" H 3975 3300 50  0000 C CNN
+	1    3975 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C1
+U 1 1 58A00262
+P 3975 4075
+F 0 "C1" H 4000 4175 50  0000 L CNN
+F 1 "1uF" H 4000 3975 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206_HandSoldering" H 4013 3925 50  0001 C CNN
+F 3 "" H 3975 4075 50  0000 C CNN
+	1    3975 4075
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R3
+U 1 1 58A0029C
+P 7450 3625
+F 0 "R3" V 7530 3625 50  0000 C CNN
+F 1 "1K" V 7450 3625 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 7380 3625 50  0001 C CNN
+F 3 "" H 7450 3625 50  0000 C CNN
+	1    7450 3625
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED D1
+U 1 1 58A002E5
+P 7450 4100
+F 0 "D1" H 7450 4200 50  0000 C CNN
+F 1 "LED" H 7450 4000 50  0000 C CNN
+F 2 "LEDs:LED_0805" H 7450 4100 50  0001 C CNN
+F 3 "" H 7450 4100 50  0000 C CNN
+	1    7450 4100
+	0    -1   -1   0   
+$EndComp
+Text Label 4825 2100 0    60   ~ 0
+VDD
+$Comp
+L GND #PWR01
+U 1 1 58A00A52
+P 4975 4925
+F 0 "#PWR01" H 4975 4675 50  0001 C CNN
+F 1 "GND" H 4975 4775 50  0000 C CNN
+F 2 "" H 4975 4925 50  0000 C CNN
+F 3 "" H 4975 4925 50  0000 C CNN
+	1    4975 4925
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery BT1
+U 1 1 58A00B0B
+P 2925 3350
+F 0 "BT1" H 3025 3400 50  0000 L CNN
+F 1 "Battery" H 3025 3300 50  0000 L CNN
+F 2 "GTB:S8211R" V 2925 3390 50  0001 C CNN
+F 3 "" V 2925 3390 50  0000 C CNN
+	1    2925 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 2900 3975 2900
+Wire Wire Line
+	3975 2800 3975 3150
+Connection ~ 3975 2900
+Wire Wire Line
+	5050 3150 4700 3150
+Wire Wire Line
+	4700 3150 4700 3700
+Wire Wire Line
+	3975 3700 5050 3700
+Wire Wire Line
+	3975 3450 3975 3925
+Connection ~ 3975 3700
+Connection ~ 4700 3700
+Wire Wire Line
+	3975 4225 3975 4600
+Wire Wire Line
+	3975 4600 7450 4600
+Wire Wire Line
+	7450 4600 7450 4300
+Wire Wire Line
+	5600 4400 5600 4600
+Connection ~ 5600 4600
+Wire Wire Line
+	6250 4400 6250 4600
+Connection ~ 6250 4600
+Wire Wire Line
+	7450 3775 7450 3900
+Wire Wire Line
+	7450 3475 7450 3300
+Wire Wire Line
+	7450 3300 6850 3300
+Wire Wire Line
+	5800 2300 5800 2100
+Wire Wire Line
+	3975 2100 6100 2100
+Wire Wire Line
+	3975 2100 3975 2500
+Wire Wire Line
+	6100 2100 6100 2300
+Connection ~ 5800 2100
+Connection ~ 4975 4600
+Wire Wire Line
+	2925 3200 2925 2825
+Wire Wire Line
+	2925 2825 3350 2825
+Wire Wire Line
+	2925 3500 2925 3850
+$Comp
+L GND #PWR02
+U 1 1 58A00C3C
+P 2925 3850
+F 0 "#PWR02" H 2925 3600 50  0001 C CNN
+F 1 "GND" H 2925 3700 50  0000 C CNN
+F 2 "" H 2925 3850 50  0000 C CNN
+F 3 "" H 2925 3850 50  0000 C CNN
+	1    2925 3850
+	1    0    0    -1  
+$EndComp
+Text Label 3350 2825 2    60   ~ 0
+VDD
+Wire Wire Line
+	4975 4600 4975 4925
+$EndSCHEMATC
